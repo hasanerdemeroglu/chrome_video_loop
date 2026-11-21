@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="player.css">
+</head>
+<body>
+  <header><div><strong>VIDEO LOOP</strong><small>Yerel medya oynatıcı</small></div><span id="status" class="status">Hazır</span></header>
+  <main>
+    <div class="screen">
+      <video id="video" playsinline></video>
+      <div id="empty" class="empty"><div class="play">▶</div><b>Video klasörü seçilmedi</b><span>Başlamak için aşağıdan klasör seç.</span></div>
+      <div class="overlay"><span id="nowPlaying">Oynatılacak video yok</span><button id="mute" title="Sesi aç/kapat">🔇</button></div>
+    </div>
+    <div class="controls">
+      <button id="prev" title="Önceki">⏮</button>
+      <button id="play" class="primary" title="Oynat / Duraklat">▶</button>
+      <button id="next" title="Sonraki">⏭</button>
+      <button id="loop" class="active" title="Döngü">↻</button>
+      <button id="fullscreen" title="Tam ekran">⛶</button>
+    </div>
+    <div class="progress"><div id="progressFill"></div></div>
+    <div class="time"><span id="elapsed">00:00</span><span id="duration">00:00</span></div>
+    <section class="folder">
+      <button id="chooseFolder" class="choose">＋ Klasör seç</button>
+      <button id="chooseFiles" class="secondary">Dosya ekle</button>
+      <input id="fileInput" type="file" accept="video/*,.mp4,.webm,.ogg,.mov,.m4v" multiple hidden>
+      <button id="rescan" class="secondary">↻ Yenile</button>
+      <span id="count">0 video</span>
+    </section>
+    <section class="playlist">
+      <div class="section-title"><b>Oynatma listesi</b><span id="folderName">Henüz klasör yok</span></div>
+      <div id="list" class="list"><div class="empty-list">Videolar burada listelenecek.</div></div>
+    </section>
+    <footer>İpucu: Ses için bir kez “Sesi aç” düğmesine bas. Chrome otomatik sesli oynatmayı engelleyebilir.</footer>
+  </main>
+  <script src="player.js"></script>
+</body></html>

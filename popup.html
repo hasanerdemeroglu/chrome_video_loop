@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <h1>Video Paneli</h1>
+  <label class="switch"><input id="enabled" type="checkbox"><span>Panel özelliği açık</span></label>
+  <section>
+    <h2>Bu siteyi yönet</h2>
+    <div class="domain-row"><input id="domain" placeholder="ornek.com"><button id="add">Ekle</button></div>
+    <button id="addCurrent" class="wide secondary">Açık olan siteyi ekle</button>
+    <div id="domains" class="domains"></div>
+    <small>Panel yalnızca listedeki sitelerde görünür. Alt alan adları da kapsanır.</small>
+  </section>
+  <section>
+    <h2>Panel konumu</h2>
+    <div class="positions">
+      <button data-pos="left">← Sol</button><button data-pos="right">Sağ →</button>
+      <button data-pos="top">↑ Üst</button><button data-pos="bottom">Alt ↓</button>
+    </div>
+    <label class="size-label">Panel boyutu <b id="sizeText">38%</b></label>
+    <input id="size" type="range" min="20" max="70" value="38">
+  </section>
+  <p class="hint">Değişiklikler otomatik kaydedilir. Açık sekmelerde panelin güncellenmesi birkaç saniye sürebilir.</p>
+  <script src="popup.js"></script>
+</body></html>
